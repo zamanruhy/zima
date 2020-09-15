@@ -1,0 +1,50 @@
+// Fonts
+@include font-face("ApercuPro", "../fonts/ApercuPro/ApercuPro-Thin", 100, normal, woff2 woff);
+@include font-face("ApercuPro", "../fonts/ApercuPro/ApercuPro-ExtraLight", 200, normal, woff2 woff);
+@include font-face("ApercuPro", "../fonts/ApercuPro/ApercuPro-Light", 300, normal, woff2 woff);
+@include font-face("ApercuPro", "../fonts/ApercuPro/ApercuPro-Regular", 400, normal, woff2 woff);
+@include font-face("ApercuPro", "../fonts/ApercuPro/ApercuPro-Medium", 500, normal, woff2 woff);
+@include font-face("ApercuPro", "../fonts/ApercuPro/ApercuPro-Bold", 700, normal, woff2 woff);
+@include font-face("ApercuPro", "../fonts/ApercuPro/ApercuPro-Black", 900, normal, woff2 woff);
+
+@include font-face("BluuZima", "../fonts/BluuZima/BluuZima-Bold", 700, normal, woff2 woff);
+
+// Layout
+.app {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  overflow: hidden;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.container {
+  @include container();
+}
+
+// Display
+@each $bp in map-keys($breakpoints) {
+  @if $bp != xs {
+    .hidden-#{$bp}-up {
+      @include up($bp) {
+        display: none !important;
+      }
+    }
+    .hidden-#{$bp}-down {
+      @include down($bp) {
+        display: none !important;
+      }
+    }
+  }
+}
+
+// Components

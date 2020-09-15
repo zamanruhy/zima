@@ -1,0 +1,5 @@
+<svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+<rect x="2.58984" width="7" height="1" />
+<rect x="8.58984" y="7" width="7" height="1" transform="rotate(-90 8.58984 7)" />
+<path d="M8.58984 1L5.31712 4.27273L2.77166 6.81818L0.589844 9" stroke="currentColor"/>
+</svg>

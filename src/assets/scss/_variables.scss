@@ -1,0 +1,65 @@
+// Colors
+$yellow: #ffd14f;
+$blue: #3761a3;
+$blue-dark: #18284a;
+$dark: #212020;
+$gray: #8c99ac;
+$gray-light: #edeff3;
+$light: #f9faff;
+
+// Body & link
+$font-family-primary: ApercuPro, Arial, sans-serif;
+$font-family-secondary: BluuZima, Georgia, Times New Roman, Times, serif;
+$font-family: $font-family-primary;
+$font-size: 16px;
+$line-height: 1.5;
+$body-bg: #ffffff;
+$body-color: $dark;
+$link-color: $blue;
+
+// Layout
+$side-padding: 30px;
+$side-padding-mobile: 14px;
+$min-width: 320px;
+$max-width: 1168px + $side-padding * 2;
+$max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+// Grid
+$grid-gutter: 32px;
+$grid-gutter-tablet: 30px;
+$grid-gutter-mobile: 10px;
+$grid-columns: 12;
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Z-indexes
+$z-indexes: (
+  sticky: 1010,
+  fixed: 1020,
+  backdrop: 1030,
+  modal: 1040,
+  tooltip: 1050,
+  dropdown: 1060
+);
+
+// Transitions
+$easings: (
+  fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1),
+  linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1),
+  fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1),
+  fast-in-fast-out: cubic-bezier(0.25, 0.8, 0.25, 1),
+  swing: cubic-bezier(0.25, 0.8, 0.5, 1)
+);
+$transition: 0.3s map-get($easings, swing);
+
+// Components

@@ -1,0 +1,42 @@
+:root {
+  --grid-columns: 4;
+  --grid-color: hsl(149deg 100% 74% / 25%);
+  --repeating-width: calc(100% / var(--grid-columns));
+  --column-width: calc((100% / var(--grid-columns)) - var(--grid-gutter));
+
+  @include up(md) {
+    --grid-columns: 6;
+    --grid-color: hsl(286 51% 44% / 0.25);
+  }
+
+  @include up(lg) {
+    --grid-columns: 12;
+    --grid-color: hsl(204 80% 72% / 0.25);
+  }
+}
+
+html {
+  &:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    max-width: $max-width;
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--grid-color),
+      var(--grid-color) var(--column-width),
+      transparent var(--column-width),
+      transparent var(--repeating-width)
+    );
+    background-size: calc(100% + var(--grid-gutter)) 100%;
+    background-repeat: no-repeat;
+    z-index: 10000;
+    pointer-events: none;
+    border: transparent solid;
+    border-width: 0 var(--side-padding);
+  }
+}
